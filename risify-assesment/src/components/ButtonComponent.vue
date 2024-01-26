@@ -35,7 +35,7 @@ export default defineComponent({
         color: {
             type: String,
             default: 'orange',
-            validator: (value: string) => ['orange', 'green', 'dgreen, red, yellow'].includes(value)
+            validator: (value: string) => ['orange', 'green', 'dgreen', 'red', 'yellow'].includes(value)
         },
         block: Boolean,
         disabled: Boolean
