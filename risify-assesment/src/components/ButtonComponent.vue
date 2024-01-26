@@ -4,12 +4,13 @@
                :target="tag === 'a' ? target : undefined"
                :to="tag === 'router-link' ? to : undefined"
                :class="buttonClasses" @click="handleClick">
-        <slot />
+        <slot/>
     </component>
 </template>
   
 <script lang="ts">
 import { defineComponent, computed } from 'vue';
+import { createValidator } from '../validators/validators'
 
 export default defineComponent({
     name: 'ButtonComponent',
@@ -17,7 +18,7 @@ export default defineComponent({
         tag: {
             type: String,
             default: 'button',
-            validator: (value: string) => ['button', 'a', 'router-link'].includes(value)
+            validator: createValidator(['button', 'a', 'router-link'])
         },
         href: String,
         target: String,
@@ -25,17 +26,17 @@ export default defineComponent({
         size: {
             type: String,
             default: 'regular',
-            validator: (value: string) => ['small', 'regular', 'large'].includes(value)
+            validator: createValidator(['small', 'regular', 'large'])
         },
         variant: {
             type: String,
             default: 'filled',
-            validator: (value: string) => ['filled', 'outlined'].includes(value)
+            validator: createValidator(['filled', 'outlined'])
         },
         color: {
             type: String,
             default: 'orange',
-            validator: (value: string) => ['orange', 'green', 'dgreen', 'red', 'yellow'].includes(value)
+            validator: createValidator(['orange', 'green', 'dgreen', 'red', 'yellow'])
         },
         block: Boolean,
         disabled: Boolean
