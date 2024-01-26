@@ -65,6 +65,14 @@ export default defineComponent({
   
 <style scoped lang="scss">
 
+  $primary-L-orange: #C2664E;
+  $primary-L-green: #30A47A;
+  $primary-L-dark-green: #113A29;
+  $primary-M-red: #F55555;
+  $primary-M-orange: #FFBF52;
+  $outlined-fill: #FFFFFF;
+  $outlined-fill-hover: #DCF5EE;
+
 .button {
     border-radius: 24px;
     padding: 14px 24px;
@@ -97,20 +105,20 @@ export default defineComponent({
     }
 
     &--variant-filled {
-        background-color: #C2664E;
-        border: 1px solid #C2664E;
-        color: white;
+        background-color: $primary-L-orange;
+        border: 1px solid $primary-L-orange;
+        color: $outlined-fill;
 
         &:hover,
         &:focus {
-            background-color: lighten(#C2664E, 10%);
+            background-color: lighten($primary-L-orange, 10%);
         }
     }
 
     &--variant-outlined {
-        background: #FFFFFF !important;
-        border: 1px solid #113A29 !important;
-        color: #113A29 !important;
+        background: $outlined-fill !important;
+        border: 1px solid $primary-L-dark-green !important;
+        color: $primary-L-dark-green !important;
 
         &:hover,
         &:focus {
@@ -119,62 +127,62 @@ export default defineComponent({
     }
 
     &--color-orange {
-        background-color: #C2664E;
-        border: 1px solid #C2664E;
-        color: white;
+        background-color: $primary-L-orange;
+        border: 1px solid $primary-L-orange;
+        color: $outlined-fill;
 
         &:hover,
         &:focus {
-            background-color: lighten(#C2664E, 10%);
-            border: 1px solid lighten(#C2664E, 10%);
+            background-color: lighten($primary-L-orange, 10%);
+            border: 1px solid lighten($primary-L-orange, 10%);
         }
     }
 
     &--color-green {
-        background-color: #30A47A;
-        border: 1px solid #30A47A;
-        color: white;
+        background-color: $primary-L-green;
+        border: 1px solid $primary-L-green;
+        color: $outlined-fill;
 
         &:hover,
         &:focus {
-            background-color: lighten(#30A47A, 10%);
-            border: 1px solid lighten(#30A47A, 10%);
+            background-color: lighten($primary-L-green, 10%);
+            border: 1px solid lighten($primary-L-green, 10%);
         }
     }
 
     &--color-dgreen {
-        background-color: #113A29;
-        border: 1px solid #113A29;
-        color: white;
+        background-color: $primary-L-dark-green;
+        border: 1px solid $primary-L-dark-green;
+        color: $outlined-fill;
 
         &:hover,
         &:focus {
-            background-color: lighten(#113A29, 10%);
-            border: 1px solid lighten(#113A29, 10%);
+            background-color: lighten($primary-L-dark-green, 10%);
+            border: 1px solid lighten($primary-L-dark-green, 10%);
         }
     }
 
     &--color-red {
-        background-color: #F55555;
-        border: 1px solid #F55555;
-        color: white;
+        background-color: $primary-M-red;
+        border: 1px solid $primary-M-red;
+        color: $outlined-fill;
 
         &:hover,
         &:focus {
-            background-color: lighten(#F55555, 10%);
-            border: 1px solid lighten(#F55555, 10%);
+            background-color: lighten($primary-M-red, 10%);
+            border: 1px solid lighten($primary-M-red, 10%);
         }
     }
 
     &--color-yellow {
-        background-color: #FFBF52;
-        border: 1px solid #FFBF52;
-        color: black;
+        background-color: $primary-M-orange;
+        border: 1px solid $primary-M-orange;
+        color: #000000;
 
         &:hover,
         &:focus {
-            background-color: lighten(#FFBF52, 10%);
-            border: 1px solid lighten(#FFBF52, 10%);
+            background-color: lighten($primary-M-orange, 10%);
+            border: 1px solid lighten($primary-M-orange, 10%);
         }
     }
 
