@@ -1,30 +1,50 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import ButtonComponent from './components/ButtonComponent.vue';
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="container">
+    <div class="button-wrapper">
+      <ButtonComponent size="large" tag="a" href="https://github.com/Dudziej/Risify" target="_blank" variant="filled">
+        Link do repo </ButtonComponent>
+      <ButtonComponent variant="filled" color="green"> Text </ButtonComponent>
+      <ButtonComponent size="small" variant="filled" color="dgreen"> Text </ButtonComponent>
+    </div>
+    <div class="button-wrapper">
+      <ButtonComponent size="large" variant="filled" tag="router-link" to="/Home" color="red"> router-link
+      </ButtonComponent>
+      <ButtonComponent variant="filled" color="yellow"> Text </ButtonComponent>
+      <ButtonComponent size="small" variant="filled"> Text </ButtonComponent>
+    </div>
+    <div class="button-wrapper">
+      <ButtonComponent size="large" variant="outlined"> Text </ButtonComponent>
+      <ButtonComponent variant="filled"> Text </ButtonComponent>
+      <ButtonComponent size="small" variant="filled" color="green"> Text </ButtonComponent>
+    </div>
+    <div class="button-wrapper">
+      <ButtonComponent size="large" variant="outlined" block> Text </ButtonComponent>
+      <ButtonComponent size="small" variant="outlined" block disabled> Text </ButtonComponent>
+    </div>
+    <div class="button-wrapper">
+      <ButtonComponent variant="filled" tag="a"
+        href="https://s3.eu-central-1.amazonaws.com/pressland-cms/cache/article_show_cover_1_1/83/pokoj-mlodziezowy-dla-chlopca.jpeg"
+        color="yellow" block>Wejdź do pokoju</ButtonComponent>
+    </div>
   </div>
-  <HelloWorld msg="Vite + Vue" />
+
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.container {
+  margin: 20px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+.small-container {
+  max-width: 50px;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}</style>
