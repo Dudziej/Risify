@@ -73,7 +73,6 @@ export default defineComponent({
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    vertical-align: middle;
     justify-content: center;
     transition: background-color 0.3s, border-color 0.3s, opacity 0.3s;
     margin: 4px;
