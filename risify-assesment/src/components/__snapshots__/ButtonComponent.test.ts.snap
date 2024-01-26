@@ -1,0 +1,3 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ButtonComponent > matches the snapshot 1`] = `"<button data-v-24e38f3d="" class="button button--size-regular button--variant-filled button--color-undefined"></button>"`;
