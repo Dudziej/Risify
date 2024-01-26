@@ -80,6 +80,8 @@ export default defineComponent({
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    box-sizing: border-box;
+    height: 40px;
 
     &--size-small {
         border-radius: 20px;
