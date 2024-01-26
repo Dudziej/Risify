@@ -47,4 +47,5 @@ import ButtonComponent from './components/ButtonComponent.vue';
   display: flex;
   align-items: center;
   justify-content: center;
-}</style>
+}
+</style>
