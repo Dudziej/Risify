@@ -34,8 +34,7 @@ export default defineComponent({
             validator: createValidator(['filled', 'outlined'])
         },
         color: {
-            type: String,
-            default: 'orange',
+            type: String, // nie zakładam defaultowej wartości żeby uniknąć importantów przy variancie "outlined"
             validator: createValidator(['orange', 'green', 'dgreen', 'red', 'yellow'])
         },
         block: Boolean,
@@ -66,7 +65,7 @@ export default defineComponent({
   
 <style scoped lang="scss">
 
-  $primary-L-orange: #C2664E;
+  $primary-L-orange: #C2664E; // mógłbym tu zrobić mapę scss kolorów ale przy tak małym projekcie nie ma to raczej sensu
   $primary-L-green: #30A47A;
   $primary-L-dark-green: #113A29;
   $primary-M-red: #F55555;
@@ -106,7 +105,8 @@ export default defineComponent({
     }
 
     &--variant-filled {
-        background-color: $primary-L-orange;
+        // kod mógłby zostać wyrzucony chciałem jednak zachować spójność co do wytycznych w zadaniu, przy usuwaniu jednak musiałbym ustawić default w propsie color
+        background-color: $primary-L-orange;  
         border: 1px solid $primary-L-orange;
         color: $outlined-fill;
 
@@ -117,13 +117,13 @@ export default defineComponent({
     }
 
     &--variant-outlined {
-        background: $outlined-fill !important;
-        border: 1px solid $primary-L-dark-green !important;
-        color: $primary-L-dark-green !important;
+        background: $outlined-fill;
+        border: 1px solid $primary-L-dark-green;
+        color: $primary-L-dark-green;
 
         &:hover,
         &:focus {
-            background-color: #DCF5EE !important;
+            background-color: #DCF5EE;
         }
     }
 
