@@ -6,10 +6,10 @@ import ButtonComponent from './components/ButtonComponent.vue';
   <div class="container">
     <div class="button-wrapper">
       <ButtonComponent size="large" 
+                       variant="filled"
                        tag="a" 
                        href="https://github.com/Dudziej/Risify" 
-                       target="_blank" 
-                       variant="filled">
+                       target="_blank">
                        Link do repo 
                       </ButtonComponent>
       <ButtonComponent variant="filled" 

@@ -3,7 +3,8 @@
                :href="tag === 'a' ? href : undefined" 
                :target="tag === 'a' ? target : undefined"
                :to="tag === 'router-link' ? to : undefined"
-               :class="buttonClasses" @click="handleClick">
+               :class="buttonClasses" 
+               @click="handleClick">
         <slot/>
     </component>
 </template>
@@ -129,7 +130,7 @@ export default defineComponent({
 
     &--color-orange {
         background-color: $primary-L-orange;
-        border: 1px solid $primary-L-orange;
+        border: 1px solid $primary-L-orange; // przy większym projekcie wydzieliłbym kolory do dynamicznego stylowania w js a zmiany na hover rozwiązałbym eventami mouseenter/mouseleave
         color: $outlined-fill;
 
         &:hover,
